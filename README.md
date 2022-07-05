@@ -28,7 +28,7 @@ Required. The pool id in BECH32 format, delegation to which will be checked.
 
 ### `options.addressCborToBech32: (cbor: string) => string`
 
-To reduce the size of the library build and drop the dependency, the address conversion function is specified through the constructor. The function must be called with address CBOR as argument and return the address in BECH32 format.
+Required. To reduce the size of the library build and drop the dependency, the address conversion function is specified through the constructor. The function must be called with address CBOR as argument and return the address in BECH32 format.
 
 > example using `@stricahq/typhonjs`:
 
