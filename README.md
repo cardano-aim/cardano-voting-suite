@@ -82,7 +82,7 @@ An async function returns the amount of delegated ADA for the given epochs. Inte
 
 ```typescript
 interface IPoolDelegation {
-  amount: number; // ada amount
+  amount: number; // delegated ada amount
   epoch_no: number; // the epoch number
 }
 ```
@@ -129,3 +129,38 @@ interface IStakeAddress {
   view: string; // stake address in BECH32 format
 }
 ```
+
+## utils
+
+Importing:
+
+```javascript
+import { poolDelegationsByEpoch, getVotingPower, strToHex, hexToStr } from 'cardano-voting-suite';
+```
+
+### `poolDelegationsByEpoch(poolDelegations: IPoolDelegation[], lastTakenEpoch: number, takenEpochsQuantity: number): IEpochPoolDelegation[]`
+
+A helper returns delegations by epochs. If there is no delegation for epoch given in range then amount is null. Interface of the returned value:
+
+```typescript
+interface IEpochPoolDelegation {
+  amount: number | null; // delegated ada amount
+  epoch: number; // the epoch number
+}
+```
+
+### `getVotingPower(poolDelegations: IPoolDelegation[]): number`
+
+Just a reducer function for getting the amounts sum of the given pool delegations.
+
+### `strToHex(str: string): string`
+
+A function used by default for converting signing payload.
+
+### `hexToStr(str: string): string`
+
+A reverse converter for the previous one.
+
+---
+
+##### alxevvv, 2022
