@@ -1,0 +1,42 @@
+{
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "env": {
+    "es6": true,
+    "browser": true
+  },
+  "extends": [
+    "plugin:prettier/recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "rules": {
+    "@typescript-eslint/explicit-function-return-type": "warn",
+    "@typescript-eslint/no-empty-function": "warn",
+    "@typescript-eslint/no-unused-vars": "off",
+    "linebreak-style": [
+      "error",
+      "unix"
+    ],
+    "generator-star-spacing": [
+      "error",
+      {
+        "before": false,
+        "after": true,
+        "anonymous": "neither",
+        "method": {
+          "before": false,
+          "after": true
+        }
+      }
+    ],
+    "no-console": "warn",
+    "no-empty": "warn",
+    "no-unused-vars": "off",
+    "prefer-const": "warn",
+    "prettier/prettier": "warn",
+    "quotes": [
+      "warn",
+      "single"
+    ]
+  }
+}
