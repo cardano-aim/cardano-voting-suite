@@ -112,7 +112,6 @@ export class Voting {
     this.currentEpoch = await this.cardanoDB.currentEpoch();
   }
 
-  // ????
   async setPoolBech32Id(poolBech32Id: string): Promise<void> {
     this.poolBech32Id = poolBech32Id;
     const poolId = await this.cardanoDB.poolId(poolBech32Id);

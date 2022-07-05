@@ -14,6 +14,6 @@ export interface IVotingOptions {
 }
 
 export interface IVote {
-  proposalId: string;
+  proposalId?: unknown;
   amount: number;
 }
